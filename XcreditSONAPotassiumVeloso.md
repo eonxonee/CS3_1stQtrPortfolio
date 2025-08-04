@@ -1,7 +1,7 @@
 # Take on SONA July 2025 of Pres. Ferdinand R. Marcos Jr.
 # by Adeleine Mathea V. Veloso, 9-Potassium
 
-<img src="img_girl.jpg" alt="Marcos SONA 2025">
+<img src="Marcos SONA 2025.png" alt="Marcos SONA 2025">
 
 ## 1. Give 2-4 key points from the SONA 2025 that you found interesting
 
@@ -22,15 +22,15 @@
 ### Point 2 - Call Out to the Corrupt Officials
 <p>e</p>
 
-### Point 3
+### Point 3 - Comment on Missing Sabungeros
 <p>e</p>
 
 ## 3. Write 2 paragraphs of reflection (each paragraph is ideally around 4 sentences)
 
 <p>e</p>
 <br>
-<p>
+<p>e</p>
 
 ## 4. What 1 word/ phrase/ or sentence do you have for the Philippines after hearing SONA 2025?
 
-**sentence**
+**We are cooked.**
