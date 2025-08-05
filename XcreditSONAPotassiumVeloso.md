@@ -1,7 +1,7 @@
 # Take on SONA July 2025 of Pres. Ferdinand R. Marcos Jr.
 # by Adeleine Mathea V. Veloso, 9-Potassium
 
-<img src="Marcos SONA 2025.png" alt="Marcos SONA 2025">
+<a href="["https://www.youtube.com/watch?v=zsZ1T0hsLvA&ab_channel=ABS-CBNNews"]>SONA Video</a>
 
 ## 1. Give 2-4 key points from the SONA 2025 that you found interesting
 
