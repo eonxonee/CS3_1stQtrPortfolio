@@ -9,9 +9,9 @@ let numPerDay = prompt("Enter how much you consume daily: ");
 
 totalRequired = (numPerDay * 365) * (maxAge - age);
 
-console.log("Is this information correct? Age = " + age + ", Maximum Age = " + maxAge + ", Daily Consumption = " + numPerDay");
-if (confirm("Is this information correct? Age = " + age + ", Maximum Age = " + maxAge + ", Daily Consumption = " + numPerDay")) {
-    alert("You will need " + totalRequired + "snacks to last you until the ripe old age of " + maxAge + ".");
+console.log("Is this information correct? Age = " + age + ", Maximum Age = " + maxAge + ", Daily Consumption = " + numPerDay);
+if (confirm("Is this information correct? Age = " + age + ", Maximum Age = " + maxAge + ", Daily Consumption = " + numPerDay)) {
+    alert("You will need " + totalRequired + " snacks to last you until the ripe old age of " + maxAge + ".");
 } else {
     alert("Run the code again.");
 }
