@@ -7,8 +7,20 @@ var age = 14;
 var maxAge = 120;
 var numPerDay = 20;
 
-var totalRequired = (numPerDay * 365) * (maxAge - age) 
-cout << "You will need " << totalRequired " to last you until the ripe old age of " << maxAge << ".";
+cout << "Enter your age: ";
+cin >> age;
+cout << "Enter your maximum age: ";
+cin >> maxAge;
+cout << "Enter how much of your favorite snack you consume per day: ";
+cin >> numPerDay;
+
+console.log(Is this information correct?);
+if (confirm("Is this information correct?")) {
+    var totalSnacks = (maxAge - age) * 365 * numPerDay;
+    console.log("You will consume " + totalSnacks + " snacks in your lifetime.");
+} else {
+    console.log("Run the code again.");
+}
 
 </script>
 </body>
