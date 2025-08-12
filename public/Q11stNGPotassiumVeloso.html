@@ -7,7 +7,7 @@ let age = prompt("Enter your age: ");
 let maxAge = prompt("Enter your maximum age: ");
 let numPerDay = prompt("Enter how much you consume daily: ");
 
-totalRequired = (numPerDay * 365) * (maxAge - age);
+let totalRequired = (numPerDay * 365) * (maxAge - age);
 
 console.log("Is this information correct? Age = " + age + ", Maximum Age = " + maxAge + ", Daily Consumption = " + numPerDay);
 if (confirm("Is this information correct? Age = " + age + ", Maximum Age = " + maxAge + ", Daily Consumption = " + numPerDay)) {
