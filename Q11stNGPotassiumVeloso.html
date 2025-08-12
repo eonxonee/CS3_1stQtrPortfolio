@@ -10,8 +10,7 @@ let numPerDay = prompt("Enter how much you consume daily: ");
 
 console.log("Is this information correct?");
 if (confirm("Is this information correct?")) {
-    var totalSnacks = (maxAge - age) * 365 * numPerDay;
-    console.log("You will consume " + totalSnacks + " snacks in your lifetime.");
+    console.log("Age = " + age + ", Maximum Age = " + maxAge + ", Daily Consumption = " + numPerDay);
 } else {
     alert("Run the code again.");
 }
