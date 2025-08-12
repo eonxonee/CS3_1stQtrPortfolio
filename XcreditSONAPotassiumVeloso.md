@@ -1,36 +1,26 @@
 # Take on SONA July 2025 of Pres. Ferdinand R. Marcos Jr.
 # by Adeleine Mathea V. Veloso, 9-Potassium
 
-<img src="Marcos SONA 2025.png" alt="Marcos SONA 2025">
+SONA Video: https://www.youtube.com/watch?v=zsZ1T0hsLvA&ab_channel=ABS-CBNNews
 
 ## 1. Give 2-4 key points from the SONA 2025 that you found interesting
 
-### Point 1 - Mental Health of Students
-<p>e</p>
-
+### Point 1 - Marcos gives emphasis on mental health of students
 ### Point 2 - Zero Balance Health Bill
-<p>No bill as long as it is treated at DOH hospitals.</p>
-
-### Point 3 - Love Bus is Free
-<p>e</p>
+### Point 3 - Flood Control Programs
 
 ## 2. Give 1-3 key points from SONA 2025 that you found weird for any reason (explaining is optional)
 
 ### Point 1 - Allocation of Funds to Education and Health
-<p>e</p>
-
 ### Point 2 - Call Out to the Corrupt Officials
-<p>e</p>
-
 ### Point 3 - Comment on Missing Sabungeros
-<p>e</p>
 
 ## 3. Write 2 paragraphs of reflection (each paragraph is ideally around 4 sentences)
 
-<p>e</p>
+<p>For starters, the SONA 2025 covered most of the critical/heated issues in the Philippines now. These include: the Missing Sabungeros, flood control programs, and corruption (ironically). While watching, an observation I made was that there was applause for every "good" point Marcos made. This made me question is this was a State of the Nation Address or an inspirational speech. </p>
 <br>
-<p>e</p>
+<p>Overall, the SONA 2025 was not that promising or convincing. All our President did was spit out more projects that will not be fulfilled, along with statistics to make it seem like our country is doing well. Though this is not surprising, it is quite disheartening. If the true goal of our current administration goal is to make the country better, then they must put in more effort and listen to the masses.</p>
 
 ## 4. What 1 word/ phrase/ or sentence do you have for the Philippines after hearing SONA 2025?
 
-**We are cooked.**
+**Marcos Administration, please keep your promises and do better.**
