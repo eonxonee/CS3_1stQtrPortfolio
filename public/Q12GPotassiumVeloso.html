@@ -27,10 +27,12 @@
         btn.addEventListener('click', totalMeal);
 
         function totalMeal() {
+            /*
             function truncateToTwoDecimals(totalCost) {
                 return Math.trunc(totalCost * 100) / 100;
             }
-            
+            */
+
             totalCost = inpMealPrice.value + inpTip.value + (inpServiceCharge.value / 100 * inpMealPrice.value);
             document.write("Total Meal: " + truncateToTwoDecimals(totalCost));
         }
