@@ -19,10 +19,20 @@
         <button id="btn_accept">Accept Input</button>
     </div>
     <script>
+        const btn = document.getElementById("btn_accept");
+        const inpMealPrice = document.getElementById("inp_meal_price");
+        const inpTip = document.getElementById("inp_tip");
+        const inpServiceCharge = document.getElementById("inp_service_charge");
+
+        btn.addEventListener('click', totalMeal);
+
         function totalMeal() {
-              // place your JS code here
+            function truncateToTwoDecimals(totalCost) {
+                return Math.trunc(totalCost * 100) / 100;
+            }
             
-         
+            totalCost = inpMealPrice.value + inpTip.value + (inpServiceCharge.value / 100 * inpMealPrice.value);
+            document.write("Total Meal: " + truncateToTwoDecimals(totalCost));
         }
     </script>
 
