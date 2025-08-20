@@ -14,7 +14,7 @@
     <br><br>
     <button id="btn_checkIt">Check It</button>
     <br><br>
-    Result: 
+    Result: <span id="result"></span>
 
     <script>
 
@@ -26,13 +26,15 @@
 
         function checkIt() {
             var userGuess = parseInt(inpGuess.value);
+            var result;
             if (userGuess === dNumber) {
-                document.write("You are correct!");
+                result = "You are correct!";
             } else if (userGuess < dNumber) {
-                document.write("Higher");
+                result = "Higher";
             } else {
-                document.write("Lower");
+                result = "Lower";
             }
+            document.getElementById("result").innerText = result;
         }
     </script>
 
