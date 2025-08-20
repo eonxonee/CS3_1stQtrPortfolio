@@ -11,19 +11,28 @@
     <br><br>
     Enter your guess:
     <input id="inp_guess">
-    <br>
-    <button id="btn_accept">Check It</button>
+    <br><br>
+    <button id="btn_checkIt">Check It</button>
     <br><br>
     Result: 
 
     <script>
 
        var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+       const btncheckIt = document.getElementById("btn_checkIt");
+       const inpGuess = document.getElementById("inp_guess");
 
-        function checkIt() {   
-            // The function should be able to read the information typed by the user.
-            // compare it against the variable dNumber containing a random number from 1 to 100.
-            // display a result of either Higher, Lower or You are correct!
+        btncheckIt.addEventListener('click', checkIt);
+
+        function checkIt() {
+            var userGuess = parseInt(inpGuess.value);
+            if (userGuess === dNumber) {
+                document.write("You are correct!");
+            } else if (userGuess < dNumber) {
+                document.write("Higher");
+            } else {
+                document.write("Lower");
+            }
         }
     </script>
 
