@@ -11,16 +11,16 @@ do {
 } while (i<=3);
 
 grades = [100, 67, 41, 69]
+arr = grades
+grades[0] = 1000
+console.log(arr[0])
 
-for (let i = 0; i < grades.length; i++) {
-    console.log(grades[i])
-}
+grades.push("kangkong")
+grades.unshift("mangga")
 
-for (let grade of grades) {
-    console.log(grade)
-}
+var popped = grades.pop()
+var shifted = grades.shift()
 
-grades.forEach(print_grade)
-function print_grade(grade) {
-    console.log(grade)
-}
+console.log(grades)
+console.log(popped, shifted)
+
