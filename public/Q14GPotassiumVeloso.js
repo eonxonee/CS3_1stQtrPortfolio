@@ -27,6 +27,9 @@ switch (greeting) {
     default:
         console.log("UNKNOWN");
         break;
+}
+  // end of your code
+  // do not remove the lines below
 
   process.exit();
 

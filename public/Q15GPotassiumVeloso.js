@@ -5,11 +5,11 @@ process.stdin.on('data', input => {
 
   if (NUM % 2 === 1) {
     console.log("Weird");
-  } else if (NUM >= 2 && NUM <= 5) {
+  } else if (NUM % 2 === 0 && NUM >= 2 && NUM <= 5) {
     console.log("Not Weird");
-  } else if (NUM >= 6 && NUM <= 20) {
+  } else if (NUM % 2 === 0 && NUM >= 6 && NUM <= 20) {
     console.log("Weird");
-  } else if (NUM > 20) {
+  } else if (NUM % 2 === 0 && NUM > 20) {
     console.log("Not Weird");
   }
 
