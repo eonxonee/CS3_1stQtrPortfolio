@@ -9,44 +9,98 @@
             font-style: italic;
             color: #ff004c96;
             background-color: white;
+            background-image: url('https://cdn.wallpapersafari.com/18/76/YSsUpP.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
-        
         h1 {
             text-align: center;
             font-size: xx-large;
             font-family: monospace;
             font-style: italic;
+            margin-top: 40px;
         }
-
-        button {
+        #gameContainer {
+            background: rgba(255,255,255,0.8);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            margin: 60px auto;
+            box-shadow: 0 4px 16px rgba(255,0,76,0.15);
             text-align: center;
+        }
+        button {
             background-color: #ffb6c1;
             color: white;
             border: none;
-            padding: 20px 30px;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #wordDisplay {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 0.2em;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            font-size: 1.2rem;
+            padding: 8px;
+            width: 40px;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid #ffb6c1;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <h1>Guess My Word</h1>
-    <p id="wordDisplay"></p>
-    <input type="text" id="guessInput" maxlength="1">
-    <button onclick="makeGuess()">Guess</button>
-    <p id="message"></p>
-
+    <div id="gameContainer">
+        <p id="wordDisplay"></p>
+        <input type="text" id="guessInput" maxlength="1" autocomplete="off" aria-label="Guess a letter">
+        <button onclick="makeGuess()" id="guessBtn">Guess</button>
+        <p id="message"></p>
+    </div>
     <script>
-        let secretWord = ["m", "e", "s", "s", "y", "m", "a", "t", "h", "e", "a"];
-        let guessedWord = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_"];
-        let attemptsLeft = 5; // Define the attemptsLeft variable
+        // Simple guessing game logic
+        var secretWord = ["m", "e", "s", "s", "y", "m", "a", "t", "h", "e", "a"];
+        var guessedWord = [];
+        var attemptsLeft = 5;
 
-        document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+        for (var i = 0; i < secretWord.length; i++) {
+            guessedWord.push("_");
+        }
+
+        function showWord() {
+            document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+        }
+
+        showWord();
 
         function makeGuess() {
-            let guess = document.getElementById("guessInput").value.toLowerCase();
-            let correct = false;
+            var input = document.getElementById("guessInput");
+            var guess = input.value.toLowerCase();
+            var correct = false;
 
-            for (let i = 0; i < secretWord.length; i++) {
-                if (secretWord[i] === guess) {
+            if (guess.length !== 1 || guess < "a" || guess > "z") {
+                document.getElementById("message").textContent = "Please enter a single letter.";
+                input.value = "";
+                return;
+            }
+
+            for (var i = 0; i < secretWord.length; i++) {
+                if (secretWord[i] === guess && guessedWord[i] === "_") {
                     guessedWord[i] = guess;
                     correct = true;
                 }
@@ -54,24 +108,27 @@
 
             if (!correct) {
                 attemptsLeft--;
-                document.getElementById("message").textContent = `Incorrect! Attempts left: ${attemptsLeft}`;
+                document.getElementById("message").textContent = "Incorrect! Attempts left: " + attemptsLeft;
             } else {
                 document.getElementById("message").textContent = "Correct guess!";
             }
 
-            document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+            showWord();
 
             if (attemptsLeft <= 0) {
                 document.getElementById("message").textContent = "Game over! You've run out of attempts.";
-                document.getElementById("guessInput").disabled = true;
+                input.disabled = true;
+                document.getElementById("guessBtn").disabled = true;
             }
 
-            if (!guessedWord.includes("_")) {
+            if (guessedWord.indexOf("_") === -1) {
                 document.getElementById("message").textContent = "Congratulations! You've guessed the word!";
-                document.getElementById("guessInput").disabled = true;
+                input.disabled = true;
+                document.getElementById("guessBtn").disabled = true;
             }
 
-            document.getElementById("guessInput").value = ""; // Clear the input field
+            input.value = "";
+            input.focus();
         }
     </script>
 </body>
