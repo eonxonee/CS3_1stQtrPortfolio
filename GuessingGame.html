@@ -63,10 +63,10 @@
     document.getElementById("attempts").textContent = "Attempts left: " + attemptsLeft;
 
     if (guessedWord.join("") === secretWord.join("")) {
-      document.getElementById("message").textContent = "You guessed it: Lackadaisical Leian!";
+      document.getElementById("message").textContent = "The word was: Messy mathea";
       document.getElementById("guessInput").disabled = true;
     } else if (attemptsLeft <= 0) {
-      document.getElementById("message").textContent = "Game over! The word was: Lackadaisical Leian";
+      document.getElementById("message").textContent = "The word was: Messy Mathea";
       document.getElementById("guessInput").disabled = true;
     } else {
       document.getElementById("message").textContent = correct ? "Correct!" : "Try again.";
