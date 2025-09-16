@@ -1,77 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-    body {
-        text-align: center;
-        font-size: large;
-        font-family: monospace;
-        font-style: italic;
-        color: #ff004c96;
-        background-color: white;
-    }
-    
-    h1 {
-        text-align: center;
-        font-size: xx-large;
-        font-family: monospace;
-        font-style: italic;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        body {
+            font-style: italic;
+            color: #ff004c96;
+            background-color: white;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: xx-large;
+            font-family: monospace;
+            font-style: italic;
+        }
 
-    button {
-        text-align: center;
-        background-color: #ffb6c1;
-        color: white;
-        border: none;
-        padding: 20px 30px;
-    }
-</style>
+        button {
+            text-align: center;
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 20px 30px;
+        }
+    </style>
 </head>
+<body>
+    <h1>Guess My Word</h1>
+    <p id="wordDisplay"></p>
+    <input type="text" id="guessInput" maxlength="1">
+    <button onclick="makeGuess()">Guess</button>
+    <p id="message"></p>
 
-<h1>Guess My Word</h1>
-<p id="wordDisplay"></p>
-<input type="text" id="guessInput" maxlength="1">
-<button onclick="makeGuess()">Guess</button>
-<p id="message"></p>
+    <script>
+        let secretWord = ["m", "e", "s", "s", "y", "m", "a", "t", "h", "e", "a"];
+        let guessedWord = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_"];
+        let attemptsLeft = 5; // Define the attemptsLeft variable
 
-<script>
-  let secretWord = ["m", "e", "s", "s", "y", "m", "a", "t", "h", "e", "a"];
-  let guessedWord = ["_", "_", "_","_", "_", "_", "_", "_", "_", "_", "_"];
+        document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
 
-  document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+        function makeGuess() {
+            let guess = document.getElementById("guessInput").value.toLowerCase();
+            let correct = false;
 
-  function makeGuess() {
-    let guess = document.getElementById("guessInput").value.toLowerCase();
-    let correct = false;
+            for (let i = 0; i < secretWord.length; i++) {
+                if (secretWord[i] === guess) {
+                    guessedWord[i] = guess;
+                    correct = true;
+                }
+            }
 
-    if (guess.length !== 1 || !/[a-z]/.test(guess)) {
-      document.getElementById("message").textContent = "Please enter a single letter.";
-      document.getElementById("guessInput").value = "";
-      return;
-    }
+            if (!correct) {
+                attemptsLeft--;
+                document.getElementById("message").textContent = `Incorrect! Attempts left: ${attemptsLeft}`;
+            } else {
+                document.getElementById("message").textContent = "Correct guess!";
+            }
 
-    for (let i = 0; i < secretWord.length; i++) {
-      if (secretWord[i] === guess) {
-        guessedWord[i] = guess;
-        correct = true;
-      }
-    }
+            document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
 
-    if (!correct) {
-      attemptsLeft--;
-    }
+            if (attemptsLeft <= 0) {
+                document.getElementById("message").textContent = "Game over! You've run out of attempts.";
+                document.getElementById("guessInput").disabled = true;
+            }
 
-    document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
-    document.getElementById("attempts").textContent = "Attempts left: " + attemptsLeft;
+            if (!guessedWord.includes("_")) {
+                document.getElementById("message").textContent = "Congratulations! You've guessed the word!";
+                document.getElementById("guessInput").disabled = true;
+            }
 
-    if (guessedWord.join("") === secretWord.join("")) {
-      document.getElementById("message").textContent = "The word was: Messy mathea";
-      document.getElementById("guessInput").disabled = true;
-    } else if (attemptsLeft <= 0) {
-      document.getElementById("message").textContent = "The word was: Messy Mathea";
-      document.getElementById("guessInput").disabled = true;
-    } else {
-      document.getElementById("message").textContent = correct ? "Correct!" : "Try again.";
-    }
-
-    document.getElementById("guessInput").value = "";
-  }
-</script>
+            document.getElementById("guessInput").value = ""; // Clear the input field
+        }
+    </script>
+</body>
+</html>
