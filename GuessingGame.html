@@ -73,7 +73,6 @@
         <p id="message"></p>
     </div>
     <script>
-        // Simple guessing game logic
         var secretWord = ["m", "e", "s", "s", "y", "m", "a", "t", "h", "e", "a"];
         var guessedWord = [];
         var attemptsLeft = 5;
@@ -92,9 +91,24 @@
             var input = document.getElementById("guessInput");
             var guess = input.value.toLowerCase();
             var correct = false;
+            var alreadyGuessed = false;
 
             if (guess.length !== 1 || guess < "a" || guess > "z") {
                 document.getElementById("message").textContent = "Please enter a single letter.";
+                input.value = "";
+                return;
+            }
+
+            // Check if letter is already revealed
+            for (var i = 0; i < secretWord.length; i++) {
+                if (guessedWord[i] === guess) {
+                    alreadyGuessed = true;
+                    break;
+                }
+            }
+
+            if (alreadyGuessed) {
+                document.getElementById("message").textContent = "You already revealed this letter!";
                 input.value = "";
                 return;
             }
