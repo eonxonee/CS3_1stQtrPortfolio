@@ -42,6 +42,12 @@
     let guess = document.getElementById("guessInput").value.toLowerCase();
     let correct = false;
 
+    if (guess.length !== 1 || !/[a-z]/.test(guess)) {
+      document.getElementById("message").textContent = "Please enter a single letter.";
+      document.getElementById("guessInput").value = "";
+      return;
+    }
+
     for (let i = 0; i < secretWord.length; i++) {
       if (secretWord[i] === guess) {
         guessedWord[i] = guess;
@@ -49,8 +55,23 @@
       }
     }
 
+    if (!correct) {
+      attemptsLeft--;
+    }
+
     document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
-    document.getElementById("message").textContent = correct ? "✅ Correct!" : "❌ Try again.";
+    document.getElementById("attempts").textContent = "Attempts left: " + attemptsLeft;
+
+    if (guessedWord.join("") === secretWord.join("")) {
+      document.getElementById("message").textContent = "You guessed it: Lackadaisical Leian!";
+      document.getElementById("guessInput").disabled = true;
+    } else if (attemptsLeft <= 0) {
+      document.getElementById("message").textContent = "Game over! The word was: Lackadaisical Leian";
+      document.getElementById("guessInput").disabled = true;
+    } else {
+      document.getElementById("message").textContent = correct ? "Correct!" : "Try again.";
+    }
+
     document.getElementById("guessInput").value = "";
   }
 </script>
