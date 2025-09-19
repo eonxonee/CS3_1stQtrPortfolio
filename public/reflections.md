@@ -1,5 +1,5 @@
 <h1>Topics We Discussed In Class That I Know Very Well</h1>
-1. HTML/Markdown - Using HTML and Markdown is something I learned early. I can easily write headings, lists, and links using both.)  
+1. <p>HTML/Markdown - Using HTML and Markdown is something I learned early. I can easily write headings, lists, and links using both.</p>
 2. Javascript Syntax - I understand how to write basic Javascript code correctly. I can spot errors if the syntax is wrong.)  
 3. Control Structures - I know how if-else statements work in deciding what the program should do, and I can use them to make programs do differents catered to specific conditions. 
 4. Variables - I know how to declare variables and store values in them, as well as how to change or modify when needed.
