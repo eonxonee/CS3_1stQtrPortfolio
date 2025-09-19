@@ -1,5 +1,5 @@
 <h1>Topics We Discussed In Class That I Know Very Well</h1>
-1. <p>**Markdown/Format** - </p>
+1. <p>Markdown/Format - </p>
 2. <p></p>
 3. <p></p>
 4. <p></p>
