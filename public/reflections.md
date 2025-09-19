@@ -10,7 +10,7 @@
 2. <p>Readline - I do not get how the process works and what the code should look like. I will need more research and examples as well as explanations.</p>
 3. <p>Functions - I know that functions are blocks of code that can be reused. Calling them and how to inputs values in correctly is where I need more practice.</p>
 4. <p>While Loops - While loops keep running until a condition is false. I get confused when it involves other kinds of loops or arrays and functions.</p>
-5. <p>While Loops - While loops keep running until a condition is false. I get confused when it involves other kinds of loops or arrays and functions.</p>
+5. <p>For Loops - I know that for loops are used to repeat actions a set number of times. I need more practice writing them to go through arrays or data.</p>
 
 <h1>Describe on what will be your plan of action in order to help yourself in understanding further the topics listed on the second items.</h1>
 <p>My plan is to practice writing small codes every day that use arrays, functions, and loops. I will review examples from class and try to change them to see how they work. I will also ask questions in class or from my classmates if I do not understand something. Watching short tutorials online can also help me see more examples. And lastly, I will test my code often so I can learn from mistakes and improve.</p>  
